@@ -8,7 +8,7 @@ import {OrderDto} from '../classes/order-dto';
 })
 export class ChatbotService {
 
-  private chatbotUrl = 'http://localhost:5000/chat-bot/';
+  private chatbotUrl = 'http://horaetu.shop:5000/chat-bot/';
 
   constructor(private httpClient: HttpClient) { }
 
