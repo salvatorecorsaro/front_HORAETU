@@ -9,8 +9,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class FormService {
-  private countriesUrl = 'http://localhost:8080/api/countries';
-  private regionsUrl = 'http://localhost:8080/api/regions';
+  private countriesUrl = 'https://gateway-horae.herokuapp.com/api/countries';
+  private regionsUrl = 'https://gateway-horae.herokuapp.com/api/regions';
   constructor(private httpClient: HttpClient) {
   }
 

@@ -8,7 +8,7 @@ import {OrderDto} from '../classes/order-dto';
 })
 export class OrderService {
 
-  private orderUrl = 'http://localhost:8080/api/orders';
+  private orderUrl = 'https://gateway-horae.herokuapp.com/api/orders';
 
   constructor(private httpClient: HttpClient) { }
 

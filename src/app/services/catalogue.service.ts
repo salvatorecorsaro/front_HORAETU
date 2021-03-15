@@ -12,9 +12,9 @@ import {ProductDto} from '../classes/product-dto';
 export class CatalogueService {
 
 
-  private baseUrl = 'http://localhost:8080/api/products';
+  private baseUrl = 'https://gateway-horae.herokuapp.com/api/products';
 
-  private categoryUrl = 'http://localhost:8080/api/product-category';
+  private categoryUrl = 'https://gateway-horae.herokuapp.com/api/product-category';
 
   constructor(private httpClient: HttpClient) {
   }
@@ -73,19 +73,20 @@ export class CatalogueService {
 
   postNewProduct(newProduct: ProductDto): Observable<any> {
 
-    return this.httpClient.post<ProductDto>('http://localhost:8080/api/products/post', newProduct);
+    https://gateway-horae.herokuapp.com/api/products
+    return this.httpClient.post<ProductDto>('https://gateway-horae.herokuapp.com/api/products/post', newProduct);
   }
 
   deleteProduct(productCode: string): Observable<any> {
     console.log('code we are sending: ' + productCode);
-    return this.httpClient.post<string>('http://localhost:8080/api/products/delete', productCode);
+    return this.httpClient.post<string>('https://gateway-horae.herokuapp.com/api/products/delete', productCode);
   }
 
   // updateProduct(productCode: string, productNewName: string): Observable<any> {
   //   return this.httpClient.put<any>('http://localhost:8080/api/products/update/' + productCode + '/' + productNewName);
   // }
   updateProduct(code: any, name: any): Observable<any> {
-    return this.httpClient.post<string>('http://localhost:8080/api/products/update/' + code , name);
+    return this.httpClient.post<string>('https://gateway-horae.herokuapp.com/api/products/update/' + code , name);
   }
 }
 
