@@ -1,0 +1,55 @@
+
+<div class="container-fluid" id="catalogue-container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row full-screen">
+        <div class="product-card" *ngFor="let product of products" cdkDrag>
+
+          <a routerLink="/products/{{ product.id }}">
+            <img mat-card-image class="img-fluid"  src="{{product.imageUrl}}" alt="">
+          </a>
+          <div routerLink="/products/{{ product.id }}">
+            <a routerLink="/products/{{ product.id }}">
+              <p>{{product.name}}</p>
+            </a>
+            <p>{{product.unitPrice}}</p>
+          </div>
+        </div>
+        <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+          No products found.
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+
+        <ngb-pagination [(page)]="thePageNumber"
+                        [pageSize]="thePageSize"
+                        [collectionSize]="theTotalElements"
+                        [maxSize]="5"
+                        [directionLinks]="false"
+                        (pageChange)="listProducts()">
+
+        </ngb-pagination>
+
+      </div>
+
+      <div class="col-sm-5 ">
+        <mat-form-field appearance="fill">
+          <mat-label>Products for page</mat-label>
+          <mat-select [(value)]="thePageSize"(selectionChange)="updatePageSize()">
+            <mat-option></mat-option>
+            <mat-option [value]="option" *ngFor="let option of pageSizeOptions">{{option}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    <div class="col-sm-1"></div>
+    </div>
+
+
+</div>
+

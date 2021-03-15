@@ -1,0 +1,131 @@
+.drawer {
+  width: auto;
+  background-color: var(--main-menu-color);
+
+}
+
+#logo {
+  height: 70px;
+}
+
+.space{
+  height: 5vh;
+}
+
+#app-container{
+  min-height: 100vh;
+  background-color: var(--main-background-color)
+}
+
+.drawer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-template-areas:
+  "drawer-header drawer-header"
+  ". ."
+    "drawer-main drawer-main"
+    "drawer-main drawer-main"
+    "drawer-footer drawer-footer";
+  height: 100%;
+}
+
+
+
+#drawer-header {
+  padding: 20px;
+  grid-area: drawer-header;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#drawer-main {
+  margin-top: 20px;
+  padding: 20px;
+  grid-area: drawer-main;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#drawer-footer {
+  padding: 20px;
+  grid-area: drawer-footer;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
+.my-container {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+  "header header header header"
+    "lefty main main main"
+    "lefty main main main"
+    "lefty main main main";
+  height: 100%;
+}
+
+.main-content {
+  background-color: var(--main-background-color);
+  padding:10px;
+  grid-area: main;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-header {
+  background-color: var(--main-menu-color);
+  padding: 3px;
+  grid-area: header;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-lefty {
+  background-color: var(--main-background-color);
+  padding: 20px;
+  grid-area: lefty;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#mobile-catalog {
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #mobile-catalog {
+    display: block;
+  }
+
+  #catalog-menu {
+    display: none;
+  }
+
+  .my-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+"header"
+"main"
+"main"
+"main";
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 2048px) {
+  #catalog-menu {
+    display: block;
+  }
+
+  #mobile-catalog {
+    display: none;
+  }
+}
+

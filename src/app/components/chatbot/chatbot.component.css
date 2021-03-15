@@ -1,0 +1,45 @@
+#chat-bot-main{
+
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+#liza {
+  margin-top: 5px;
+}
+
+#intro{
+  color: #4e564e;
+}
+
+input{
+  background-color: var(--main-background-color);
+}
+
+
+
+.mat-expansion-panel-header {
+  background-color: var(--main-button-color) !important;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+  background-color: grey !important;
+}
+
+.mat-panel-description{
+  background-color: var(--main-menu-color) !important;
+}
+.panel{
+  text-align: center;
+  background-color: #E9EBF8 !important;
+}

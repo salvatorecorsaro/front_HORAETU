@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-background-color: rgb(241 240 231); /*Ralph Lauren™ WW09 Design Studio White */
+  --main-menu-color: rgb(150,165,153);
+  --main-button-color: rgb(73, 96, 81);
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+
+}
+
+
+html, body {
+  height: 100%;
+  background-color: var(--main-background-color);
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+}
+
+.mat-success {
+  background-color: rgb(73, 96, 81);
+  color: #fff !important;
+}
+
+.mat-light-green {
+  background-color: rgb(127, 134, 127);
+  color: #fff;
+}
+
+

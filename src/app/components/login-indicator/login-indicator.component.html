@@ -1,0 +1,16 @@
+
+
+<div id="my-container">
+  <div id="login-welcome" *ngIf="isAuthenticated && userFullName" class="login-status-user-info">
+    Welcome back {{userFullName}}
+  </div>
+
+  <div id="login-button">
+    <button *ngIf="!isAuthenticated" mat-raised-button color="success" routerLink="/login" >Login</button>
+    <button *ngIf="isAuthenticated" mat-raised-button color="success" (click)="logout()" >Logout</button>
+  </div>
+</div>
+
+
+
+

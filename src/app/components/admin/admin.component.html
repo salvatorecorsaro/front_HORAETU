@@ -1,0 +1,104 @@
+<div class="container-fluid" id="main-admin" *ngIf="adminAccount === true">
+
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="ADD">
+      <form  [formGroup]="newProductFormGroup" (ngSubmit)="onSubmit()">
+
+        <div formGroupName="newProduct" class="form-area">
+          <h3>New Product</h3>
+          <!--          firstName -->
+          <div class="row">
+            <div class="col-md-2"><label>Name</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="name" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><label>Code</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="sku" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><label>description</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="description" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><label>image url</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="imageUrl" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><label>category</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="category" type="number">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"><label>unitPrice</label></div>
+            <div class="col-md-9">
+              <div class="input-space">
+                <input formControlName="unitPrice" type="number">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button mat-raised-button color="success" type="submit" class="mt-10">Add</button>
+        </div>
+
+      </form>
+    </mat-tab>
+
+    <mat-tab label="DELETE">
+      <form [formGroup]="form" (ngSubmit)="onSubmitDelete(formDirective)" #formDirective="ngForm">
+        <div>
+          <mat-form-field>
+            <label>
+              <input matInput placeholder="Product Code" formControlName="code">
+            </label>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="success" type="submit" [disabled]="form.invalid" class="mt-10">Delete</button>
+        </div>
+      </form>
+    </mat-tab>
+
+
+    <mat-tab label="UPDATE"><form [formGroup]="formUpdate" (ngSubmit)="onSubmitUpdate(formDirective)" #formDirective="ngForm">
+      <div>
+        <mat-form-field>
+          <label>
+            <input matInput placeholder="Product Code" formControlName="code">
+          </label>
+        </mat-form-field>
+        <mat-form-field>
+          <label>
+            <input matInput placeholder="Product Name" formControlName="name">
+          </label>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="success" type="submit" [disabled]="form.invalid" class="mt-10">Update</button>
+      </div>
+    </form></mat-tab>
+  </mat-tab-group>
+  </div>
+<div *ngIf="adminAccount === false">
+  You are not an admin :) contact one by writing an email at admin@horaetu.shop
+</div>

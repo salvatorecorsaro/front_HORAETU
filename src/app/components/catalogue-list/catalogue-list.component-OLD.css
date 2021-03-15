@@ -1,0 +1,93 @@
+#catalogue-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.product-card {
+  max-width: 250px;
+  height:auto;
+  margin: 10px;
+  padding: 5px;
+  background-color: #E9EBF8;
+  color: #000;
+}
+.product-card:hover{
+  transform: scale(1.05);
+  transition: .4s ease-in-out;
+}
+.product-image {
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body{
+  font-size: 12px;
+  height: 110px;
+}
+.card-buttons{
+  text-align: center;
+  padding: 5px;
+}
+
+.details-btn {
+  margin: 2px;
+  background-color: cornflowerblue;
+  font-size: 11px;
+  text-align: center;
+}
+.details-btn:hover{
+  margin: 2px;
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+
+.add-to-cart-btn {
+  background-color: darkslategrey;
+  font-size: 13px;
+}
+.add-to-cart-btn:hover{
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+
+.full-screen {
+  width: 100%;
+}
+
+
+:root {
+  --main-background-color: rgb(241 240 231); /*Ralph Lauren™ WW09 Design Studio White */
+}
+
+.my-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+  background-color: var(--main-background-color);
+  padding: 1.5rem;
+  padding-top: 0;
+  grid-area: main;
+  overflow: auto;
+}
+.main-footer {
+  text-align: left;
+  background-color: var(--main-background-color);
+  padding: 1.5rem;
+  padding-left: 10%;
+  grid-area: footer;
+}
+
+

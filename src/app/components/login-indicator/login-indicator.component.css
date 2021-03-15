@@ -1,0 +1,32 @@
+#my-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "login-welcome login-button";
+  height: 100%;
+}
+
+#login-welcome {
+  font-size: 12px;
+  margin-left: 150px;
+  padding-top: 20px;
+  grid-area: login-welcome;
+}
+
+#login-button {
+  color: white !important;
+  padding: 10px;
+  grid-area: login-button;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+  #login-welcome {
+    padding-top: 17px;
+  }
+
+}
+

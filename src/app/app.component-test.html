@@ -1,0 +1,67 @@
+<!--<mat-slider min="1" max="100" step="1" value="1"></mat-slider>-->
+
+
+<!--<div *ngFor="let box of num" class="box" cdkDrag></div>-->
+
+<mat-drawer-container class="container-fluid" [hasBackdrop]="true">
+<div class="row">
+<!--  side menu -->
+
+  <mat-drawer #drawer mode=over>
+    <mat-list>
+      <div mat-subheader>Categories</div>
+      <mat-list-item *ngFor="let category of categories">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <div mat-line >{{category}}</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+<!--  side menu end-->
+
+<!--  main page-->
+
+  <mat-drawer-content class="main-page">
+
+<!--    header-->
+
+    <div class="header">
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon"
+              (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Home</h1>
+      <h1>info</h1>
+      <h1>contacts</h1>
+    </div>
+
+    <div class="content">
+      <mat-grid-list cols="4" rowHeight="30vh">
+        <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [colspan]="tile.cols"
+          [rowspan]="tile.rows"
+          [style.background]="tile.color">
+          {{tile.text}}
+        </mat-grid-tile>
+      </mat-grid-list>
+
+    </div>
+
+    <div class="footer"></div>
+
+<!--    header end-->
+
+  </mat-drawer-content>
+
+<!--  main page end-->
+</div>
+</mat-drawer-container>
+
+
+
+
+
+
+
+

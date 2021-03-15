@@ -1,0 +1,8 @@
+#main-admin{
+  height: 90vh;
+}
+
+.green{
+  border: black;
+  background-color: var(--main-button-color);
+}

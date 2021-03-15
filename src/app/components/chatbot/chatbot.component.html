@@ -1,0 +1,37 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false"
+  class="panel">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+<!--        Liza AI-->
+        Ask for help
+      </mat-panel-title>
+      <mat-panel-description>
+
+<!--        Currently I am {{panelOpenState ? 'open' : 'closed'}}-->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div id="chat-bot-main">
+      <h1 id="liza"><span><img src="assets/images/varie/ai.jpg" alt="" class="avatar"></span> <span id="intro">  Liza says:</span> {{answer}}</h1>
+      <form [formGroup]="form" (ngSubmit)="onSubmit(formDirective)" #formDirective="ngForm">
+        <div>
+          <mat-form-field>
+            <label>
+              <input matInput placeholder="Enter your question" formControlName="question">
+            </label>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="success" type="submit" [disabled]="form.invalid" class="mt-10">Ask</button>
+        </div>
+      </form>
+
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+
+
+
