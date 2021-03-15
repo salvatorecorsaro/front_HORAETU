@@ -1,0 +1,93 @@
+#title {
+  padding: 10px;
+}
+
+#checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "customer decorative"
+    "shipping billing"
+    "payment summary";
+  height: 100%;
+}
+
+
+#logo-img {
+  background-image: url("../../../assets/images/logo/LogoHorae_Thick.svg");
+  height: 100px;
+  padding: 0 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-area: logo-img;
+}
+
+#customer {
+  padding: 10px;
+  grid-area: customer;
+}
+
+#shipping {
+  padding: 10px;
+  background-color: #96A599;
+  grid-area: shipping;
+}
+
+#billing {
+  padding: 10px;
+  background-color: #96A599;
+  grid-area: billing;
+}
+
+#payment {
+  padding: 10px;
+  grid-area: payment;
+}
+
+#decorative {
+  grid-area: decorative;
+}
+
+#summary {
+  padding: 10px;
+  grid-area: summary;
+}
+
+
+#header-login {
+  padding-top: 30px;
+  grid-area: login;
+}
+
+
+#happy-image {
+  margin-left: 40%;
+  width: 20%
+}
+
+@media screen and (max-width: 600px) {
+
+  #checkout-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-gap: 0rem;
+    grid-template-areas:
+    "customer"
+    "shipping"
+    "billing"
+    "payment"
+    "summary";
+    height: 100%;
+  }
+
+  #happy-image {
+    margin-left: 10%;
+    width: 80%
+  }
+
+
+}

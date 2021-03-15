@@ -1,0 +1,32 @@
+<div class="my-container">
+  <div class="left">
+    <div>
+      <img class="prod-img" src="{{productToShow.imageUrl}}" alt="">
+    </div>
+  </div>
+  <div class="right">
+    <div class="prod-dtl">
+      <div id="text">
+        <div id="name">
+          <h1>{{productToShow.name}}</h1>
+        </div>
+        <div id="description">
+          <h2>{{productToShow.description}}</h2>
+        </div>
+        <div id="price">
+          <h3>{{productToShow.unitPrice | currency: 'EUR'}}</h3>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button (click)="goBack()" mat-mini-fab color="light-green" class="btn-detail">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button (click)="addToCart()" mat-raised-button color="success" class="btn-detail">ADD TO CART</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

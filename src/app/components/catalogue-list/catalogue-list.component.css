@@ -1,0 +1,125 @@
+.my-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+  height: 100vh;
+}
+
+.main-content {
+  background-color: var(--main-background-color);
+  padding: 0 1.5rem 1.5rem;
+  grid-area: main;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.product-list-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    ". pages . paginator";
+  text-align: left;
+  background-color: var(--main-background-color);
+  padding: 1.5rem 1.5rem 1.5rem 10%;
+  grid-area: footer;
+}
+
+.pages {
+  background-color: var(--main-background-color);
+  padding: 0 1.5rem 1.5rem;
+  grid-area: pages;
+  float: left;
+  /*overflow: auto;*/
+}
+
+.paginator {
+  background-color: var(--main-background-color);
+  padding: 0 1.5rem 1.5rem;
+  grid-area: paginator;
+  float: left;
+  /*overflow: auto;*/
+}
+
+.prod-card {
+  box-sizing: border-box;
+  float: left;
+  display: grid;
+  margin: 10px;
+  /*padding:5px;*/
+  padding: 5px 0;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "prod-img"
+    "prod-name"
+    "prod-price";
+  height: 280px;
+  width: 210px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #A5B39A;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.prod-card:hover{
+  transform: scale(1.05);
+  transition: .4s ease-in-out;
+}
+
+.prod-img {
+  height: 200px;
+  width: 100%;
+
+  grid-area: prod-img;
+}
+
+.prod-name {
+
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 0 4px;
+  /*font-weight: bold;*/
+  grid-area: prod-name;
+}
+.prod-price {
+
+font-weight: lighter;
+  margin: 5px 0;
+  padding: 0 4px;
+  grid-area: prod-price;
+  height: 15px;
+}
+
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+  color: #96A599 !important;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #96A599 !important;
+  border-color: black !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .product-list-footer {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-row: auto;
+    grid-gap: 0rem;
+    grid-template-areas:
+    "pages"
+    "paginator";
+    text-align: left;
+    background-color: var(--main-background-color);
+    padding: 1.5rem 1.5rem 1.5rem 10%;
+    grid-area: footer;
+  }
+}
+
+

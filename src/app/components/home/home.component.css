@@ -1,0 +1,119 @@
+.my-container {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "top-left top-left top-left top-right"
+    "middle-left middle-left middle-left top-right"
+    "bottom bottom bottom bottom"
+    "footer-home footer-home footer-home footer-home";
+  height: 100%;
+}
+
+#top-left {
+  grid-area: top-left;
+  background-image: url("../../../assets/images/Iconos_e_Imagenes_Horaetu/herbal-vitamins-medicine.jpg");
+  background-size: cover;
+  background-position: center;
+ height: 300px;
+  width: 100%;
+}
+
+#top-right-long {
+  grid-area: top-right;
+  background-image: url("../../../assets/images/Iconos_e_Imagenes_Horaetu/Skincare-Treatments_OI.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#middle-left {
+  grid-area: middle-left;
+  background-image: url("../../../assets/images/Iconos_e_Imagenes_Horaetu/workspace-2985783_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+#bottom {
+  padding-top: 20px;
+  grid-area: bottom;
+  height: 200px;
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  flex-shrink: 3;
+  height: 90%;
+  width: 23%;
+  margin: 0 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  float: left;
+}
+
+
+#logo-one {
+  background-image: url("../../../assets/images/vegan-logos/vegan.svg");
+}
+
+#logo-two {
+  background-image: url("../../../assets/images/vegan-logos/crueltyfree.svg");
+}
+
+#logo-three {
+  background-image: url("../../../assets/images/vegan-logos/recicle.svg");
+}
+
+#logo-four {
+  background-image: url("../../../assets/images/vegan-logos/glutenfree.svg");
+}
+
+#footer-home {
+
+  background-color: #96A599;
+  grid-area: footer-home;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.centered{
+  padding-top: 140px;
+  text-align: center;
+  text-decoration: underline black;
+  text-underline-position: under;
+  font-weight: 900;
+}
+
+.centered:hover{
+  transform: scale(1.05);
+  transition: .4s ease-in-out;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+  .my-container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+"top-left"
+"top-right"
+"middle-left"
+"bottom"
+"bottom"
+  "footer-home";
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 2048px) {
+
+}
+
+

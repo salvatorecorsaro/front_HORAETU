@@ -1,0 +1,42 @@
+<div class="my-container">
+  <div class="main-content">
+
+    <div class="prod-card" *ngFor="let product of products">
+
+      <a routerLink="/products/{{ product.id }}">
+        <div >
+          <img class="prod-img" src="{{product.imageUrl}}" alt=""></div>
+      </a>
+      <div routerLink="/products/{{ product.id }}">
+
+          <div class="prod-name">{{product.name}}</div>
+          <div class="prod-price">{{product.unitPrice | currency: 'EUR'}}</div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="product-list-footer">
+    <div class="pages">
+      <ngb-pagination [(page)]="thePageNumber"
+                      [pageSize]="thePageSize"
+                      [collectionSize]="theTotalElements"
+                      [maxSize]="5"
+                      [directionLinks]="false"
+                      (pageChange)="listProducts()">
+
+      </ngb-pagination>
+    </div>
+
+    <div class="paginator">
+      <mat-form-field appearance="fill">
+        <mat-label>Products for page</mat-label>
+        <mat-select [(value)]="thePageSize"(selectionChange)="updatePageSize()">
+          <mat-option></mat-option>
+          <mat-option [value]="option" *ngFor="let option of pageSizeOptions">{{option}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>

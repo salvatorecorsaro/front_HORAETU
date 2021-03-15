@@ -1,0 +1,54 @@
+#my-container {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "left right"
+    "products products";
+  height: 100%;
+  width: 100%;
+}
+
+#left {
+  padding: 25px;
+  grid-area: left;
+  width: 80%;
+}
+
+#left-img{
+  height: 400px;
+}
+
+#right {
+  padding: 25px;
+  grid-area: right;
+  width: 80%;
+}
+
+#products {
+  grid-area: products;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+  #my-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+"left"
+"right"
+"products";
+  }
+
+  #left-img{
+    height: 200px;
+  }
+
+  #left{
+    padding-bottom: 5px;
+  }
+  #right{
+    padding-top: 5px;
+  }
+}

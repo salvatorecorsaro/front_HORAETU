@@ -1,0 +1,14 @@
+<div id="categories">
+  <h1>Categories</h1>
+  <mat-list >
+    <mat-list-item *ngFor="let category of catalogueCategories">
+      <mat-icon mat-list-icon>label</mat-icon>
+      <a routerLink="/category/{{ category.id }}" routerLinkActive="active-link" mat-line>
+        {{ category.categoryName }}
+      </a>
+    </mat-list-item>
+  </mat-list>
+
+</div>
+
+

@@ -1,0 +1,151 @@
+.left-side {
+  background-color: darkred;
+  height: auto;
+  padding: 40px 20px;
+
+}
+
+#photo {
+  margin: auto;
+  /*background-color: rebeccapurple;*/
+  height: 300px;
+  width: 300px;
+}
+
+.right-side {
+  color: black;
+  padding: 20px;
+  background-color: white;
+  height: auto;
+}
+
+
+
+.container {
+  height: 80vh;
+}
+
+.item {
+  margin-top: 10%;
+}
+
+
+:root {
+  --main-background-color: rgb(241 240 231); /*Ralph Lauren™ WW09 Design Studio White */
+}
+
+.my-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    ". . . ."
+    "left left right right"
+    "left left right right"
+    "left left right right"
+    'left left right right'
+    ". . . .";
+  height: 90vh;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.left {
+  padding: 20px ;
+
+  grid-area: left;
+  flex-wrap: wrap;
+  justify-content:center;
+  background-color: #E9EBF8;
+  /*overflow: auto;*/
+}
+
+.right {
+
+  padding: 20px;
+  grid-area: right;
+  flex-wrap: wrap;
+  justify-content:center;
+  background-color: #E9EBF8;
+  /*overflow: auto;*/
+}
+
+.prod-img{
+  margin: 50px;
+  background-image: url("../../../assets/images/placeholders/placeholder-images-product-1_large.webp");
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  grid-area: prod-img;
+}
+
+.prod-dtl{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+  grid-gap: 0rem;
+  grid-template-areas:
+    "text"
+    "text"
+    "text"
+    '.'
+    "buttons ";
+}
+#text{
+  grid-area: text;
+}
+
+#buttons{
+  grid-area: buttons;
+  flex-wrap: wrap;
+}
+.btn-detail {
+  margin: 10px;
+  float: left;
+}
+
+#name{
+  margin-bottom: 10%;
+}
+#description{
+  margin-bottom: 5%;
+}
+#price{
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .my-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 0rem;
+    grid-template-areas:
+
+    "left left"
+    "left left"
+    "right right"
+    "right right";
+
+    /*height: 90vh;*/
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+  .prod-img{
+    margin: auto;
+    height: 50vh;
+    width: 100%;
+    grid-area: prod-img;
+  }
+  .left {
+    padding: 10px ;
+    grid-area: left;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color: #E9EBF8;
+    /*overflow: auto;*/
+  }
+}

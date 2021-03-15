@@ -1,0 +1,75 @@
+<div *ngIf="cartItems.length > 0">
+
+  <table class="table table-striped ">
+    <tr>
+      <th>Product Image</th>
+      <th>Product Detail</th>
+      <th width="30%"></th>
+    </tr>
+
+    <tr *ngFor="let tempCartItem of cartItems">
+      <td>
+        <img src="{{ tempCartItem.imageUrl }}" class="img-responsive prod-img" width="150px" alt=""/>
+      </td>
+      <td>
+        <p>{{ tempCartItem.name }}</p>
+        <p>{{ tempCartItem.unitPrice | currency: 'EUR' }}</p>
+      </td>
+      <td>
+        <div class="items">
+          <label>Quantity:</label>
+
+          <div class="row no-gutters">
+            <div class="col">
+              <button mat-flat-button color="success" (click)="decrementQuantity(tempCartItem)">
+                <mat-icon>exposure_neg_1</mat-icon>
+              </button>
+            </div>
+
+
+            <div class="col ml-2 mr-2">
+              <button mat-button>{{ tempCartItem.quantity }}</button>
+            </div>
+
+            <div class="col">
+              <button mat-flat-button color="success" (click)="incrementQuantity(tempCartItem)">
+                <mat-icon>exposure_plus_1</mat-icon>
+              </button>
+
+            </div>
+
+            <div class="col-8"></div>
+          </div>
+
+        </div>
+        <button mat-flat-button color="light-green" (click)="remove(tempCartItem)">Remove</button>
+        <button class="btn btn-sm mt-2"></button>
+
+        <p class="mt-2">Subtotal: {{ tempCartItem.quantity * tempCartItem.unitPrice | currency: 'EUR' }}</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2"></td>
+      <td class="h4">
+        <p>Total Quantity: {{ totalQuantity }}</p>
+        <p>Shipping: FREE</p>
+        <p>Total Price: {{ totalPrice | currency: 'EUR' }}</p>
+        <a routerLink="/checkout">
+          <button mat-flat-button color="success">Checkout</button>
+        </a>
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+
+
+<div *ngIf="cartItems.length == 0" >
+  <div id="alert-msg" class="alert alert-warning col-md-12" role="alert">
+    Your shopping cart is empty.
+  </div>
+  <img id="sad-image" src="assets/images/varie/sad.jpg" alt="">
+</div>
+

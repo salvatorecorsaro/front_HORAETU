@@ -1,0 +1,14 @@
+
+  <a routerLink="/cart">
+    <p id="price">
+      <mat-icon matBadge="{{ totalQuantity }}" matBadgeColor="success" id="icon">shopping_cart</mat-icon>
+      <!-- Include text description of the icon's meaning for screen-readers -->
+      <span class="cdk-visually-hidden">
+      The cart indicator
+    </span>
+      {{ totalPrice | currency: 'EUR' }}
+    </p>
+  </a>
+
+
+

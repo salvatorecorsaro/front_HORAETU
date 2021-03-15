@@ -1,0 +1,29 @@
+button {
+  margin: 3px;
+}
+
+button {
+  color: white;
+}
+#sad-image{
+  margin-left: 40%;
+  width: 20%
+}
+
+#alert-msg{
+  text-align: center
+}
+
+@media screen and (max-width: 600px) {
+
+  .prod-img {
+    padding-top: 30px;
+    width: 100px;
+  }
+  #sad-image{
+    margin-left: 10%;
+    width: 80%
+  }
+
+
+}

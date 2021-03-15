@@ -1,0 +1,7 @@
+<div id="search-bar">
+  <input #keyword type="text" placeholder="Search for products" (keyup.enter)="searchByKeyword(keyword.value)"/>
+</div>
+<div id="search-button">
+  <button mat-raised-button color="primary" (click)="searchByKeyword(keyword.value)">Search</button>
+</div>
+
